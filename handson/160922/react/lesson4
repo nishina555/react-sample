@@ -1,0 +1,29 @@
+const App = () => (
+  <div>
+    <Hello />
+    <Test />
+  </div>
+);
+
+const Test = () => (
+  <div>
+    Test
+  </div>
+)
+
+const Hello = () => (
+  <div>
+    Hello
+    <HelloStrong />
+  </div>
+)
+
+const HelloStrong = () => (
+  <div>
+    <strong>HelloStrong</strong>
+  </div>
+)
+
+
+const render = () => ReactDOM.render(<App />, document.getElementById('app'));
+render();

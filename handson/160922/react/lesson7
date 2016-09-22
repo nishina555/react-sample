@@ -1,0 +1,47 @@
+const items1 = [
+  { name: 'aaa1', color: 'black' },
+  { name: 'bbb1', color: 'green' },
+  { name: 'ccc1', color: 'pink' },
+  { name: 'ddd1', color: 'yellow' },
+];
+
+const items2 = [
+  { name: 'aaa2', color: 'black' },
+  { name: 'bbb2', color: 'green' },
+  { name: 'ccc2', color: 'pink' },
+  { name: 'ddd2', color: 'yellow' },
+];
+
+const items3 = [
+  { name: 'aaa3', color: 'black' },
+  { name: 'bbb3', color: 'green' },
+  { name: 'ccc3', color: 'pink' },
+  { name: 'ddd3', color: 'yellow' },
+];
+
+const all = [
+  { list: items1 },
+  { list: items2 },
+  { list: items3 },
+]
+
+const App = () => (
+  <div>
+    {all.map((item) => (
+    <div>
+      {(item.list).map((item) => (
+         <Hello name={item.name} color={item.color} />
+       ))}
+    </div>
+      ))}
+  </div>
+);
+
+const Hello = ({ name, color }) => (
+  <div>
+    <p style={{ color }}>Hello {name} !</p>
+  </div>
+)
+
+const render = () => ReactDOM.render(<App />, document.getElementById('app'));
+render();

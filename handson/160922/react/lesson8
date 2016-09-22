@@ -1,0 +1,31 @@
+const MyButton = () => (
+  <div>
+    <button onClick={() => alert('clicked')}>Click Me</button>
+  </div>
+);
+
+let textData = '';
+const setTextData = (event) => {
+  textData = event.target.value;
+  if (textData.length > 10) {
+    textData = textData.slice(0, 10);
+  }
+  render();
+};
+
+const MyBox = () => (
+  <div>
+    <input type="text" value={textData} onChange={setTextData} />
+  </div>
+);
+
+
+const App = () => (
+  <div>
+    <MyButton />
+    <MyBox />
+  </div>
+);
+
+const render = () => ReactDOM.render(<App />, document.getElementById('app'));
+render();

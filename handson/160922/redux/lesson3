@@ -1,0 +1,24 @@
+console.clear();
+
+let state = {
+  inputValue: 0,
+  resultValue: 0,
+  showingRsult: false,
+};
+
+console.log(state);
+
+//これはダメ state.inputValue = state.inputValue + 1;
+state = {
+  inputValue: state.inputValue + 1,
+  resultValue: state.resultValue,
+  showingRsult: state.showingRsult,
+}
+
+console.log(state);
+
+state = {
+  ...state,
+  inputValue: state.inputValue + 1,
+}
+console.log(state);

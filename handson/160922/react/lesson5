@@ -1,0 +1,20 @@
+const App = () => (
+  <div>
+    <Hello />
+  </div>
+);
+
+const helloStyle = {
+  color: 'red',
+  marginLeft: 100;
+};
+
+const Hello = () => (
+  <div style={helloStyle}>
+    Hello
+  </div>
+)
+
+
+const render = () => ReactDOM.render(<App />, document.getElementById('app'));
+render();
